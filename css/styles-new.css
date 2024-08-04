@@ -1,0 +1,142 @@
+body {
+    text-align: center;
+    font-family: 'Arial';
+    background: #006e2f;
+    color: #FFFFFF;
+}
+
+/* SE NÃO SABE? D E I X A ! hahaha */
+
+h2 a {
+    color:#FFFFFF;
+    background: -webkit-linear-gradient(#fff, #0120ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+span.win {
+    font-size: 17px;
+    color: #000000;
+    display: inline-block;
+}
+
+span.win b {
+    font-size: 25px;
+    display: block;
+    padding: 5px 10px;
+    background: rgb(0 0 0 / 30%);
+}
+
+section.maskWheel {
+    position: relative;
+}
+
+section.maskWheel:before {
+    content: '';
+    width: 100%;
+    max-width: 300px;
+    height: 0;
+    position: absolute;
+    bottom: 30px;
+    left: calc(50% - (300px / 2));
+    box-shadow: 0px 10px 5px 1px #4fff9a, 0px 3px 20px 2px #4fff9a;
+    z-index: 10;
+}
+
+section.boxWheel {
+    position: relative;
+    margin: 30px 0;
+    overflow: hidden;
+    height: 165px;
+    background: #006e2f;
+    border-top: 20px solid #006e2f;
+    border-bottom: 20px solid #006e2f;
+}
+
+section.boxWheel, section.boxWheel * {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 250px;
+    height: 250px;
+    background-color: #008539;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    transition: 3s;
+    margin: 0 auto;
+    border: 8px solid #008539;
+}
+
+.container div {
+    height: 50%;
+    width: 25%;
+    position: absolute;
+    clip-path: polygon(90% 0% , 50% 85% , 0 -15% );
+    transform: translateX(-50%);
+    transform-origin: bottom;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    left: 37.5%;
+}
+
+.container div span {
+    position: absolute;
+    height: 95%;
+    bottom: 0;
+    text-align: center;
+    display: block;
+}
+
+.container div span img {
+    display: inline-block;
+    width: 75%;
+    height: auto;
+}
+
+.arrow {
+    position: absolute;
+    top: calc(96% - (65px / 2));
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+    color: #ffffff;
+    z-index: 7;
+    pointer-events: none;
+    overflow: hidden;
+    height: 65px;
+    width: 65px;
+}
+
+.arrow::before {
+    content: "\1F817";
+    font-size: 70px;
+    position: absolute;
+    top: -50%;
+    left: calc(50% - (65px / 2));
+    z-index: 1;
+    width: 100%;
+}
+
+#spin {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 5;
+    background-color: #006e2f;
+    text-transform: uppercase;
+    border: 8px solid #008539;
+    font-weight: bold;
+    font-size: 0;
+    color: #a2a2a2;
+    width: 130px;
+    height: 130px;
+    font-family: sans-serif;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+}
